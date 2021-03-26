@@ -32,7 +32,7 @@ function getData()
     // $sql = $db_conn->prepare("SELECT * FROM `items` WHERE `item_detail` like :item_detail AND `status` =:status AND due_date > :from_date AND due_date < :to_date " );
     $sql = $db_conn->prepare("SELECT * FROM `items` WHERE $where ORDER BY `added_date` DESC");
 
-    if (isset($_REQUEST['task']) && $_REQUEST['task'] != "") $sql->bindParam(':item_detail', $task);
+    if (isset($_REQUEST['task']) && $_REQUEST['task'] != "") $sql->bindParam('item_detail', $task);
     if (isset($status) && $status != "Select Status") $sql->bindParam('status', $status);
     if (isset($from_date) && $from_date != "") $sql->bindParam('from_date', $from_date);
     if (isset($to_date) && $to_date != "") $sql->bindParam('to_date', $to_date);

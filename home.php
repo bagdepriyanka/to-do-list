@@ -20,7 +20,7 @@
 <body style="margin-top:50px">
 
     <div class="container">
-        <h1 class="center"> To Do List </h1>
+        <h1 class="text-center"> To Do List </h1>
     </div>
 
     <?php
@@ -169,7 +169,7 @@
                             </div>
                         </div>
                         <br>
-                        <div class="row">
+                        <div class="row">
                             <div class="col-md-4">
                                 <label for="due_date" class="form-label">Due Date :</label>
                             </div>
